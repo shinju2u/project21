@@ -25,14 +25,13 @@ function setup(){
     
     box = createSprite(random(20,750),20,20,20);
     box.shapeColor = "white";
-    box.velocityY=3;
-    box.velocityX=5;
+    box.velocityY=9;
+    box.velocityX=4;
 }
 
 function draw() {
     background(rgb(169,169,169));
-    box.velocityY=3;
-    box.velocityX=5;
+    
     //create edgeSprite
     edges = createEdgeSprites(); 
     box.bounceOff(edges)
@@ -40,6 +39,7 @@ function draw() {
     if (isTouching(box,surface1))
     {
         box.shapeColor= surface1.shapeColor;
+        box.bounceOff(surface1);
     }
 
     if (isTouching(box,surface2))
@@ -52,15 +52,18 @@ function draw() {
     if (isTouching(box,surface3))
     {
         box.shapeColor= surface3.shapeColor;
+        box.bounceOff(surface3);
+        
     }
     if (isTouching(box,surface4))
     {
         box.shapeColor= surface4.shapeColor;
+        box.bounceOff(surface4);
     }
 
-   Bounce(box,surface1);
-    Bounce(box,surface3);
-    Bounce(box,surface4);
+   //Bounce(box,surface1);
+   // Bounce(box,surface3);
+    //Bounce(box,surface4);
     
 
 drawSprites();
