@@ -39,7 +39,7 @@ function draw() {
     if (isTouching(box,surface1))
     {
         box.shapeColor= surface1.shapeColor;
-        box.bounceoff(surface1);
+        box.bounceOff(surface1);
         music.play();
     }
 
@@ -53,12 +53,12 @@ function draw() {
     if (isTouching(box,surface3))
     {
         box.shapeColor= surface3.shapeColor;
-        box.bounceoff(surface3);
+        box.bounceOff(surface3);
     }
     if (isTouching(box,surface4))
     {
         box.shapeColor= surface4.shapeColor;
-        box.bounceoff(surface4);
+        box.bounceOff(surface4);
     }
 
    //Bounce(box,surface1);
