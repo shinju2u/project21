@@ -25,8 +25,8 @@ function setup(){
     
     box = createSprite(random(20,750),20,20,20);
     box.shapeColor = "white";
-    box.velocityY=3;
-    box.velocityX=5;
+    box.velocityY=9;
+    box.velocityX=4;
 }
 
 function draw() {
@@ -79,6 +79,7 @@ if( o1.x- o2.x < o1.width/2 + o2.width/2
    return false
  }
 }
+
 function Bounce(o1,o2){
     if( o1.x- o2.x < o1.width/2 + o2.width/2
         && o2.x - o1.x < o1.width/2 + o2.width/2 ){
